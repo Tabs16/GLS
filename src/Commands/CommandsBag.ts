@@ -184,7 +184,7 @@ export class CommandsBag {
             [CommandNames.MathMin]: new MathMinCommand(context),
             [CommandNames.MemberVariable]: new MemberVariableCommand(context),
             [CommandNames.MemberVariableDeclare]: new MemberVariableDeclareCommand(context),
-            [CommandNames.NewObject]: new NewCommand(context),
+            [CommandNames.New]: new NewCommand(context),
             [CommandNames.Not]: new NotCommand(context),
             [CommandNames.Operation]: new OperationCommand(context),
             [CommandNames.Operator]: new OperatorCommand(context),

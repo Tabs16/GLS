@@ -360,7 +360,7 @@ export class CommandNames {
     /**
      * Name key for the New command.
      */
-    public static NewObject: string = "new";
+    public static New: string = "new";
 
     /**
      * Name key for the Not command.
