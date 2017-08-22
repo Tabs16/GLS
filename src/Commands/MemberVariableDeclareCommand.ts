@@ -14,7 +14,7 @@ export class MemberVariableDeclareCommand extends Command {
      * @todo Use a value restriction on privacy (once it's implemented).
      */
     private static parameters: Parameter[] = [
-        new SingleParameter("privacy", "The privacy of the member variable.", false),
+        new SingleParameter("privacy", "The privacy of the member variable.", true),
         new SingleParameter("name", "The name of the member variable.", true),
         new SingleParameter("type", "The type of the variable.", true)
     ];
@@ -39,38 +39,26 @@ export class MemberVariableDeclareCommand extends Command {
 
         let output: string = "";
         let privacy: string = parameters[1];
-        let name: string;
-        let type: string;
+        let variableName: string = parameters[2];
+        let type: string = parameters[3];
         let casingStyle: CaseStyle;
 
         if (privacy === "protected") {
             output += this.language.properties.classes.members.variables.protected;
             output += this.language.properties.classes.members.variables.protectedPrefix;
-            name = parameters[2];
-            type = parameters[3];
             casingStyle = this.language.properties.classes.members.variables.protectedCase;
         } else if (privacy === "private") {
             output += this.language.properties.classes.members.variables.private;
             output += this.language.properties.classes.members.variables.privatePrefix;
-            name = parameters[2];
-            type = parameters[3];
             casingStyle = this.language.properties.classes.members.variables.privateCase;
         } else {
-            if (privacy === "public") {
-                name = parameters[2];
-                type = parameters[3];
-            } else {
-                name = parameters[1];
-                type = parameters[2];
-            }
-
             output += this.language.properties.classes.members.variables.public;
             output += this.language.properties.classes.members.variables.publicPrefix;
             casingStyle = this.language.properties.classes.members.variables.publicCase;
         }
 
-        name = this.context.convertToCase([name], casingStyle);
-        output += this.context.convertParsed(["variable inline", name, type]).commandResults[0].text;
+        variableName = this.context.convertStringToCase(variableName, casingStyle);
+        output += this.context.convertParsed(["variable inline", variableName, type]).commandResults[0].text;
 
         return LineResults.newSingleLine(output, true);
     }
