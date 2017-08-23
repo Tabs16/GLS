@@ -84,8 +84,7 @@ import { ParenthesisCommand } from "./ParenthesisCommand";
 import { PrintCommand } from "./PrintCommand";
 import { RestParametersCommand} from "./RestParametersCommand";
 import { ReturnCommand } from "./ReturnCommand";
-
-// import { StaticFunctionCommand } from "./StaticFunctionCommand";
+import { StaticFunctionCommand } from "./StaticFunctionCommand";
 import { StaticFunctionDeclareEndCommand } from "./StaticFunctionDeclareEndCommand";
 import { StaticFunctionDeclareStartCommand } from "./StaticFunctionDeclareStartCommand";
 // import { StaticVariableCommand } from "./StaticVariableCommand";
@@ -205,8 +204,7 @@ export class CommandsBag {
             [CommandNames.Print]: new PrintCommand(context),
             [CommandNames.RestParameters]: new RestParametersCommand(context),
             [CommandNames.Return]: new ReturnCommand(context),
-
-            // [CommandNames.StaticFunction]: new StaticFunctionCommand(context),
+            [CommandNames.StaticFunction]: new StaticFunctionCommand(context),
             [CommandNames.StaticFunctionDeclareStart]: new StaticFunctionDeclareStartCommand(context),
             [CommandNames.StaticFunctionDeclareEnd]: new StaticFunctionDeclareEndCommand(context),
             // [CommandNames.StaticVariable]: new StaticVariableCommand(context),
