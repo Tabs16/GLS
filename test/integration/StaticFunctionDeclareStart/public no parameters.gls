@@ -1,0 +1,4 @@
+-
+class start : Abc
+    static function declare start : public DefGhi string
+-

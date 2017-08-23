@@ -30,7 +30,7 @@ export abstract class PythonicLanguage extends Language {
     protected generateClassProperties(classes: ClassProperties): void {
         classes.constructorUsesKeyword = true;
         classes.newStart = "new ";
-        classes.staticLabel = "static ";
+        classes.statics.label = "static ";
         classes.this = "self";
     }
 

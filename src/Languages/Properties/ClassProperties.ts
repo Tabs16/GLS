@@ -1,5 +1,6 @@
 import { ClassGenericProperties } from "./ClassGenericProperties";
 import { ClassMemberProperties } from "./ClassMemberProperties";
+import { ClassStaticProperties } from "./ClassStaticProperties";
 
 /**
  * Metadata on a language's classes.
@@ -61,7 +62,7 @@ export class ClassProperties {
     public generics: ClassGenericProperties = new ClassGenericProperties();
 
     /**
-     * Metadata on class member variables and functions.
+     * Metadata on member variables and functions.
      */
     public members: ClassMemberProperties = new ClassMemberProperties();
 
@@ -71,9 +72,9 @@ export class ClassProperties {
     public newStart: string;
 
     /**
-     * The keyword for a static class or member.
+     * Metadata on static variables and functions.
      */
-    public staticLabel: string;
+    public statics: ClassStaticProperties = new ClassStaticProperties();
 
     /**
      * The keyword for calling a parent class constructor.

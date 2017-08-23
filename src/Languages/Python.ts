@@ -83,6 +83,19 @@ export class Python extends PythonicLanguage {
         classes.members.functions.publicCase = CaseStyle.SnakeCase;
         classes.members.functions.publicPrefix = "";
 
+        classes.statics.label = "@staticmethod\n";
+        classes.statics.labelBeforePublicity = true;
+
+        classes.statics.functions.private = "def ";
+        classes.statics.functions.privateCase = CaseStyle.SnakeCase;
+        classes.statics.functions.privatePrefix = "__";
+        classes.statics.functions.protected = "def ";
+        classes.statics.functions.protectedCase = CaseStyle.SnakeCase;
+        classes.statics.functions.protectedPrefix = "_";
+        classes.statics.functions.public = "def ";
+        classes.statics.functions.publicCase = CaseStyle.SnakeCase;
+        classes.statics.functions.publicPrefix = "";
+
         classes.superConstructor = "super().__init__";
     }
 

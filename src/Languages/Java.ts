@@ -85,6 +85,13 @@ export class Java extends CLikeLanguage {
         classes.members.functions.public = "public ";
         classes.members.functions.publicCase = CaseStyle.CamelCase;
 
+        classes.statics.functions.private = "private ";
+        classes.statics.functions.privateCase = CaseStyle.CamelCase;
+        classes.statics.functions.protected = "protected ";
+        classes.statics.functions.protectedCase = CaseStyle.CamelCase;
+        classes.statics.functions.public = "public ";
+        classes.statics.functions.publicCase = CaseStyle.CamelCase;
+
         classes.superConstructor = "super";
     }
 

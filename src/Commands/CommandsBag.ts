@@ -84,6 +84,13 @@ import { ParenthesisCommand } from "./ParenthesisCommand";
 import { PrintCommand } from "./PrintCommand";
 import { RestParametersCommand} from "./RestParametersCommand";
 import { ReturnCommand } from "./ReturnCommand";
+
+// import { StaticFunctionCommand } from "./StaticFunctionCommand";
+import { StaticFunctionDeclareEndCommand } from "./StaticFunctionDeclareEndCommand";
+import { StaticFunctionDeclareStartCommand } from "./StaticFunctionDeclareStartCommand";
+// import { StaticVariableCommand } from "./StaticVariableCommand";
+// import { StaticVariableDeclareCommand } from "./StaticVariableDeclareCommand";
+
 import { StringFormatCommand } from "./StringFormatCommand";
 import { StringIndexCommand } from "./StringIndexCommand";
 import { StringLengthCommand } from "./StringLengthCommand";
@@ -198,6 +205,13 @@ export class CommandsBag {
             [CommandNames.Print]: new PrintCommand(context),
             [CommandNames.RestParameters]: new RestParametersCommand(context),
             [CommandNames.Return]: new ReturnCommand(context),
+
+            // [CommandNames.StaticFunction]: new StaticFunctionCommand(context),
+            [CommandNames.StaticFunctionDeclareStart]: new StaticFunctionDeclareStartCommand(context),
+            [CommandNames.StaticFunctionDeclareEnd]: new StaticFunctionDeclareEndCommand(context),
+            // [CommandNames.StaticVariable]: new StaticVariableCommand(context),
+            // [CommandNames.StaticVariableDeclare]: new StaticVariableDeclareCommand(context),
+
             [CommandNames.StringFormat]: new StringFormatCommand(context),
             [CommandNames.StringIndex]: new StringIndexCommand(context),
             [CommandNames.StringLength]: new StringLengthCommand(context),

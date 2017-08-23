@@ -1,4 +1,4 @@
-# Member Variable Retrieval
+# Member Functions
 
 ## Feature Overview
 

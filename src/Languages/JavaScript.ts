@@ -86,6 +86,13 @@ export class JavaScript extends CLikeLanguage {
         classes.members.functions.public = "";
         classes.members.functions.publicCase = CaseStyle.CamelCase;
 
+        classes.statics.functions.private = "";
+        classes.statics.functions.privateCase = CaseStyle.CamelCase;
+        classes.statics.functions.protected = "";
+        classes.statics.functions.protectedCase = CaseStyle.CamelCase;
+        classes.statics.functions.public = "";
+        classes.statics.functions.publicCase = CaseStyle.CamelCase;
+
         classes.generics.used = false;
     }
 

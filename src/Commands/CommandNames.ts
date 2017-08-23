@@ -413,6 +413,16 @@ export class CommandNames {
     public static Return: string = "return";
 
     /**
+     * Name key for the StaticFunctionDeclareEnd command.
+     */
+    public static StaticFunctionDeclareEnd: string = "static function declare end";
+
+    /**
+     * Name key for the StaticFunctionDeclareStart command.
+     */
+    public static StaticFunctionDeclareStart: string = "static function declare start";
+
+    /**
      * Name key the StringFormat command.
      */
     public static StringFormat: string = "string format";

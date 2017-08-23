@@ -82,6 +82,19 @@ export class Ruby extends PythonicLanguage {
         classes.members.functions.publicCase = CaseStyle.SnakeCase;
         classes.members.functions.publicPrefix = "";
 
+        classes.statics.label = "self.";
+        classes.statics.labelBeforePublicity = false;
+
+        classes.statics.functions.private = "def ";
+        classes.statics.functions.privateCase = CaseStyle.SnakeCase;
+        classes.statics.functions.privatePrefix = "";
+        classes.statics.functions.protected = "def ";
+        classes.statics.functions.protectedCase = CaseStyle.SnakeCase;
+        classes.statics.functions.protectedPrefix = "";
+        classes.statics.functions.public = "def ";
+        classes.statics.functions.publicCase = CaseStyle.SnakeCase;
+        classes.statics.functions.publicPrefix = "";
+
         classes.superConstructor = "super";
     }
 

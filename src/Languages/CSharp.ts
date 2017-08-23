@@ -85,6 +85,13 @@ export class CSharp extends CLikeLanguage {
         classes.members.functions.public = "public ";
         classes.members.functions.publicCase = CaseStyle.PascalCase;
 
+        classes.statics.functions.private = "private ";
+        classes.statics.functions.privateCase = CaseStyle.PascalCase;
+        classes.statics.functions.protected = "protected ";
+        classes.statics.functions.protectedCase = CaseStyle.PascalCase;
+        classes.statics.functions.public = "public ";
+        classes.statics.functions.publicCase = CaseStyle.PascalCase;
+
         classes.generics.used = true;
     }
 
