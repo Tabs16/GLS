@@ -52,5 +52,5 @@ export class ClassStaticVariableProperties {
     /**
      * Whether static variables shouldn't be declared.
      */
-    public skipstaticVariables: boolean;
+    public skipStaticVariables: boolean;
 }

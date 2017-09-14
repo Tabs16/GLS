@@ -3,6 +3,7 @@ import { Language } from "./Language";
 import { ClassProperties } from "./Properties/ClassProperties";
 import { ClassGenericProperties } from "./Properties/ClassGenericProperties";
 import { ClassMemberVariableProperties } from "./Properties/ClassMemberVariableProperties";
+import { ClassStaticVariableProperties } from "./Properties/ClassStaticVariableProperties";
 import { ConditionalProperties } from "./Properties/ConditionalProperties";
 import { DictionaryProperties } from "./Properties/DictionaryProperties";
 import { EnumProperties } from "./Properties/EnumProperties";
@@ -49,11 +50,18 @@ export abstract class PythonicLanguage extends Language {
      * @param members   A property container for metadata on class member variables.
      */
     protected generateClassMemberVariableProperties(variables: ClassMemberVariableProperties): void {
-        variables.private = "";
-        variables.protected = "";
-        variables.public = "";
         variables.publicPrefix = "";
         variables.skipMemberVariables = true;
+    }
+
+    /**
+     * Generates metadata on class static variables.
+     * 
+     * @param members   A property container for metadata on class static variables.
+     */
+    protected generateClassStaticVariableProperties(variables: ClassStaticVariableProperties): void {
+        variables.publicPrefix = "";
+        variables.skipStaticVariables = true;
     }
 
     /**

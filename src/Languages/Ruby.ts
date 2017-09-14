@@ -3,7 +3,10 @@ import { CaseStyle } from "./Casing/CaseStyle";
 import { ArrayProperties } from "./Properties/ArrayProperties";
 import { BooleanProperties } from "./Properties/BooleanProperties";
 import { ClassProperties } from "./Properties/ClassProperties";
+import { ClassMemberFunctionProperties } from "./Properties/ClassMemberFunctionProperties";
 import { ClassMemberVariableProperties } from "./Properties/ClassMemberVariableProperties";
+import { ClassStaticFunctionProperties } from "./Properties/ClassStaticFunctionProperties";
+import { ClassStaticVariableProperties } from "./Properties/ClassStaticVariableProperties";
 import { CommentProperties } from "./Properties/CommentProperties";
 import { ConditionalProperties } from "./Properties/ConditionalProperties";
 import { DictionaryProperties } from "./Properties/DictionaryProperties";
@@ -72,28 +75,8 @@ export class Ruby extends PythonicLanguage {
         classes.declareStartLeft = "class ";
         classes.declareStartRight = "";
 
-        classes.members.functions.private = "def ";
-        classes.members.functions.privateCase = CaseStyle.SnakeCase;
-        classes.members.functions.privatePrefix = "";
-        classes.members.functions.protected = "def ";
-        classes.members.functions.protectedCase = CaseStyle.SnakeCase;
-        classes.members.functions.protectedPrefix = "";
-        classes.members.functions.public = "def ";
-        classes.members.functions.publicCase = CaseStyle.SnakeCase;
-        classes.members.functions.publicPrefix = "";
-
         classes.statics.label = "self.";
         classes.statics.labelBeforePublicity = false;
-
-        classes.statics.functions.private = "def ";
-        classes.statics.functions.privateCase = CaseStyle.SnakeCase;
-        classes.statics.functions.privatePrefix = "";
-        classes.statics.functions.protected = "def ";
-        classes.statics.functions.protectedCase = CaseStyle.SnakeCase;
-        classes.statics.functions.protectedPrefix = "";
-        classes.statics.functions.public = "def ";
-        classes.statics.functions.publicCase = CaseStyle.SnakeCase;
-        classes.statics.functions.publicPrefix = "";
 
         classes.superConstructor = "super";
     }
@@ -105,6 +88,56 @@ export class Ruby extends PythonicLanguage {
      */
     protected generateClassMemberVariableProperties(variables: ClassMemberVariableProperties): void {
         super.generateClassMemberVariableProperties(variables);
+
+        variables.privateCase = CaseStyle.CamelCase;
+        variables.privatePrefix = "";
+        variables.protectedCase = CaseStyle.CamelCase;
+        variables.protectedPrefix = "";
+        variables.publicCase = CaseStyle.CamelCase;
+        variables.publicPrefix = "";
+    }
+
+    /**
+     * Generates metadata on class member functions.
+     * 
+     * @param functions   A property container for metadata on class member functions.
+     */
+    protected generateClassMemberFunctionProperties(functions: ClassMemberFunctionProperties): void {
+        functions.private = "def ";
+        functions.privateCase = CaseStyle.SnakeCase;
+        functions.privatePrefix = "";
+        functions.protected = "def ";
+        functions.protectedCase = CaseStyle.SnakeCase;
+        functions.protectedPrefix = "";
+        functions.public = "def ";
+        functions.publicCase = CaseStyle.SnakeCase;
+        functions.publicPrefix = "";
+    }
+
+    /**
+     * Generates metadata on class static functions.
+     * 
+     * @param functions   A property container for metadata on class static functions.
+     */
+    protected generateClassStaticFunctionProperties(functions: ClassStaticFunctionProperties): void {
+        functions.private = "def ";
+        functions.privateCase = CaseStyle.SnakeCase;
+        functions.privatePrefix = "";
+        functions.protected = "def ";
+        functions.protectedCase = CaseStyle.SnakeCase;
+        functions.protectedPrefix = "";
+        functions.public = "def ";
+        functions.publicCase = CaseStyle.SnakeCase;
+        functions.publicPrefix = "";
+    }
+
+    /**
+     * Generates metadata on class static variables.
+     * 
+     * @param members   A property container for metadata on class static variables.
+     */
+    protected generateClassStaticVariableProperties(variables: ClassStaticVariableProperties): void {
+        super.generateClassStaticVariableProperties(variables);
 
         variables.privateCase = CaseStyle.CamelCase;
         variables.privatePrefix = "";

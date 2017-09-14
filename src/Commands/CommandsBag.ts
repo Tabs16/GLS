@@ -87,7 +87,7 @@ import { ReturnCommand } from "./ReturnCommand";
 import { StaticFunctionCommand } from "./StaticFunctionCommand";
 import { StaticFunctionDeclareEndCommand } from "./StaticFunctionDeclareEndCommand";
 import { StaticFunctionDeclareStartCommand } from "./StaticFunctionDeclareStartCommand";
-// import { StaticVariableCommand } from "./StaticVariableCommand";
+import { StaticVariableCommand } from "./StaticVariableCommand";
 // import { StaticVariableDeclareCommand } from "./StaticVariableDeclareCommand";
 
 import { StringFormatCommand } from "./StringFormatCommand";
@@ -207,7 +207,7 @@ export class CommandsBag {
             [CommandNames.StaticFunction]: new StaticFunctionCommand(context),
             [CommandNames.StaticFunctionDeclareStart]: new StaticFunctionDeclareStartCommand(context),
             [CommandNames.StaticFunctionDeclareEnd]: new StaticFunctionDeclareEndCommand(context),
-            // [CommandNames.StaticVariable]: new StaticVariableCommand(context),
+            [CommandNames.StaticVariable]: new StaticVariableCommand(context),
             // [CommandNames.StaticVariableDeclare]: new StaticVariableDeclareCommand(context),
 
             [CommandNames.StringFormat]: new StringFormatCommand(context),

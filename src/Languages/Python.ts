@@ -3,7 +3,10 @@ import { CaseStyle } from "./Casing/CaseStyle";
 import { ArrayProperties } from "./Properties/ArrayProperties";
 import { BooleanProperties } from "./Properties/BooleanProperties";
 import { ClassProperties } from "./Properties/ClassProperties";
+import { ClassMemberFunctionProperties } from "./Properties/ClassMemberFunctionProperties";
 import { ClassMemberVariableProperties } from "./Properties/ClassMemberVariableProperties";
+import { ClassStaticFunctionProperties } from "./Properties/ClassStaticFunctionProperties";
+import { ClassStaticVariableProperties } from "./Properties/ClassStaticVariableProperties";
 import { CommentProperties } from "./Properties/CommentProperties";
 import { ConditionalProperties } from "./Properties/ConditionalProperties";
 import { DictionaryProperties } from "./Properties/DictionaryProperties";
@@ -73,30 +76,27 @@ export class Python extends PythonicLanguage {
         classes.declareStartLeft = "class ";
         classes.declareStartRight = ":";
 
-        classes.members.functions.private = "def ";
-        classes.members.functions.privateCase = CaseStyle.SnakeCase;
-        classes.members.functions.privatePrefix = "__";
-        classes.members.functions.protected = "def ";
-        classes.members.functions.protectedCase = CaseStyle.SnakeCase;
-        classes.members.functions.protectedPrefix = "_";
-        classes.members.functions.public = "def ";
-        classes.members.functions.publicCase = CaseStyle.SnakeCase;
-        classes.members.functions.publicPrefix = "";
-
         classes.statics.label = "@staticmethod\n";
         classes.statics.labelBeforePublicity = true;
 
-        classes.statics.functions.private = "def ";
-        classes.statics.functions.privateCase = CaseStyle.SnakeCase;
-        classes.statics.functions.privatePrefix = "__";
-        classes.statics.functions.protected = "def ";
-        classes.statics.functions.protectedCase = CaseStyle.SnakeCase;
-        classes.statics.functions.protectedPrefix = "_";
-        classes.statics.functions.public = "def ";
-        classes.statics.functions.publicCase = CaseStyle.SnakeCase;
-        classes.statics.functions.publicPrefix = "";
-
         classes.superConstructor = "super().__init__";
+    }
+
+    /**
+     * Generates metadata on class member functions.
+     * 
+     * @param members   A property container for metadata on class member functions.
+     */
+    protected generateClassMemberFunctionProperties(functions: ClassMemberFunctionProperties): void {
+        functions.private = "def ";
+        functions.privateCase = CaseStyle.SnakeCase;
+        functions.privatePrefix = "__";
+        functions.protected = "def ";
+        functions.protectedCase = CaseStyle.SnakeCase;
+        functions.protectedPrefix = "_";
+        functions.public = "def ";
+        functions.publicCase = CaseStyle.SnakeCase;
+        functions.publicPrefix = "";
     }
 
     /**
@@ -106,6 +106,38 @@ export class Python extends PythonicLanguage {
      */
     protected generateClassMemberVariableProperties(variables: ClassMemberVariableProperties): void {
         super.generateClassMemberVariableProperties(variables);
+
+        variables.privateCase = CaseStyle.SnakeCase;
+        variables.privatePrefix = "__";
+        variables.protectedCase = CaseStyle.SnakeCase;
+        variables.protectedPrefix = "_";
+        variables.publicCase = CaseStyle.CamelCase;
+    }
+
+    /**
+     * Generates metadata on class static functions.
+     * 
+     * @param functions   A property container for metadata on class static functions.
+     */
+    protected generateClassStaticFunctionProperties(functions: ClassStaticFunctionProperties): void {
+        functions.private = "def ";
+        functions.privateCase = CaseStyle.SnakeCase;
+        functions.privatePrefix = "__";
+        functions.protected = "def ";
+        functions.protectedCase = CaseStyle.SnakeCase;
+        functions.protectedPrefix = "_";
+        functions.public = "def ";
+        functions.publicCase = CaseStyle.SnakeCase;
+        functions.publicPrefix = "";
+    }
+
+    /**
+     * Generates metadata on class static variables.
+     * 
+     * @param members   A property container for metadata on class static variables.
+     */
+    protected generateClassStaticVariableProperties(variables: ClassStaticVariableProperties): void {
+        super.generateClassStaticVariableProperties(variables);
 
         variables.privateCase = CaseStyle.SnakeCase;
         variables.privatePrefix = "__";

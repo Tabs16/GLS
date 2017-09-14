@@ -2,7 +2,10 @@ import { ArrayProperties } from "./Properties/ArrayProperties";
 import { BooleanProperties } from "./Properties/BooleanProperties";
 import { ClassProperties } from "./Properties/ClassProperties";
 import { ClassGenericProperties } from "./Properties/ClassGenericProperties";
+import { ClassMemberFunctionProperties } from "./Properties/ClassMemberFunctionProperties";
 import { ClassMemberVariableProperties } from "./Properties/ClassMemberVariableProperties";
+import { ClassStaticFunctionProperties } from "./Properties/ClassStaticFunctionProperties";
+import { ClassStaticVariableProperties } from "./Properties/ClassStaticVariableProperties";
 import { CommentProperties } from "./Properties/CommentProperties";
 import { ConditionalProperties } from "./Properties/ConditionalProperties";
 import { DictionaryProperties } from "./Properties/DictionaryProperties";
@@ -46,7 +49,10 @@ export abstract class Language {
         this.generateBooleanProperties(this.properties.booleans);
         this.generateClassProperties(this.properties.classes);
         this.generateClassGenericProperties(this.properties.classes.generics);
+        this.generateClassMemberFunctionProperties(this.properties.classes.members.functions);
         this.generateClassMemberVariableProperties(this.properties.classes.members.variables);
+        this.generateClassStaticFunctionProperties(this.properties.classes.statics.functions);
+        this.generateClassStaticVariableProperties(this.properties.classes.statics.variables);
         this.generateCommentProperties(this.properties.comments);
         this.generateConditionalProperties(this.properties.conditionals);
         this.generateDictionaryProperties(this.properties.dictionaries);
@@ -103,11 +109,32 @@ export abstract class Language {
     protected abstract generateClassGenericProperties(generics: ClassGenericProperties): void;
 
     /**
+     * Generates metadata on class member functions.
+     * 
+     * @param functions   A property container for metadata on class member functions.
+     */
+    protected abstract generateClassMemberFunctionProperties(functions: ClassMemberFunctionProperties): void;
+
+    /**
      * Generates metadata on class member variables.
      * 
      * @param members   A property container for metadata on class member variables.
      */
     protected abstract generateClassMemberVariableProperties(members: ClassMemberVariableProperties): void;
+
+    /**
+     * Generates metadata on class static functions.
+     * 
+     * @param functions   A property container for metadata on class static functions.
+     */
+    protected abstract generateClassStaticFunctionProperties(functions: ClassStaticFunctionProperties): void;
+
+    /**
+     * Generates metadata on class static variables.
+     * 
+     * @param members   A property container for metadata on class static variables.
+     */
+    protected abstract generateClassStaticVariableProperties(variables: ClassStaticVariableProperties): void;
 
     /**
      * Generates metadata on comments.

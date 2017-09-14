@@ -2,7 +2,10 @@ import { Language } from "./Language";
 import { CaseStyle } from "./Casing/CaseStyle";
 import { ClassProperties } from "./Properties/ClassProperties";
 import { ClassGenericProperties } from "./Properties/ClassGenericProperties";
+import { ClassMemberFunctionProperties } from "./Properties/ClassMemberFunctionProperties";
 import { ClassMemberVariableProperties } from "./Properties/ClassMemberVariableProperties";
+import { ClassStaticFunctionProperties } from "./Properties/ClassStaticFunctionProperties";
+import { ClassStaticVariableProperties } from "./Properties/ClassStaticVariableProperties";
 import { CommentProperties } from "./Properties/CommentProperties";
 import { ConditionalProperties } from "./Properties/ConditionalProperties";
 import { EnumProperties } from "./Properties/EnumProperties";
@@ -29,18 +32,10 @@ export abstract class CLikeLanguage extends Language {
         classes.declareExtendsRight = "";
         classes.declareStartLeft = "class ";
 
-        classes.members.functions.privatePrefix = "";
-        classes.members.functions.protectedPrefix = "";
-        classes.members.functions.publicPrefix = "";
-
         classes.newStart = "new ";
 
         classes.statics.label = "static ";
         classes.statics.labelBeforePublicity = false;
-
-        classes.statics.functions.privatePrefix = "";
-        classes.statics.functions.protectedPrefix = "";
-        classes.statics.functions.publicPrefix = "";
 
         classes.this = "this";
     }
@@ -57,11 +52,48 @@ export abstract class CLikeLanguage extends Language {
     }
 
     /**
+     * Generates metadata on class member functions.
+     * 
+     * @param functions   A property container for metadata on class member functions.
+     */
+    protected generateClassMemberFunctionProperties(functions: ClassMemberFunctionProperties): void {
+        functions.privatePrefix = "";
+        functions.protectedPrefix = "";
+        functions.publicPrefix = "";
+    }
+
+    /**
      * Generates metadata on class member variables.
      * 
      * @param members   A property container for metadata on class member variables.
      */
     protected generateClassMemberVariableProperties(variables: ClassMemberVariableProperties): void {
+        variables.private = "private ";
+        variables.privateCase = CaseStyle.CamelCase;
+        variables.privatePrefix = "";
+        variables.protected = "protected ";
+        variables.protectedPrefix = "";
+        variables.public = "public ";
+        variables.publicPrefix = "";
+    }
+
+    /**
+     * Generates metadata on class static functions.
+     * 
+     * @param functions   A property container for metadata on class static functions.
+     */
+    protected generateClassStaticFunctionProperties(functions: ClassStaticFunctionProperties): void {
+        functions.privatePrefix = "";
+        functions.protectedPrefix = "";
+        functions.publicPrefix = "";
+    }
+
+    /**
+     * Generates metadata on class static variables.
+     * 
+     * @param members   A property container for metadata on class static variables.
+     */
+    protected generateClassStaticVariableProperties(variables: ClassStaticVariableProperties): void {
         variables.private = "private ";
         variables.privateCase = CaseStyle.CamelCase;
         variables.privatePrefix = "";

@@ -428,6 +428,11 @@ export class CommandNames {
     public static StaticFunctionDeclareStart: string = "static function declare start";
 
     /**
+     * Name key for the StaticVariable command.
+     */
+    public static StaticVariable: string = "static variable";
+
+    /**
      * Name key the StringFormat command.
      */
     public static StringFormat: string = "string format";
