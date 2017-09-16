@@ -94,7 +94,11 @@ gulp.task("src:tslint", function () {
 
     return gulp
         .src("src/**/*.ts")
-        .pipe(gulpTslint({ program }));
+        .pipe(gulpTslint({
+            formatter: "stylish",
+            program
+        }))
+        .pipe(gulpTslint.report())
 });
 
 gulp.task("src:tsc", function () {
@@ -136,7 +140,11 @@ gulp.task("test:tslint", function () {
             "./test/*.ts",
             "./test/unit/*.ts"
         ])
-        .pipe(gulpTslint({ program }));
+        .pipe(gulpTslint({
+            formatter: "stylish",
+            program
+        }))
+        .pipe(gulpTslint.report())
 });
 
 gulp.task("test:tsc", function () {
