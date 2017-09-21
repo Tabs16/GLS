@@ -9,7 +9,7 @@ Classes may define member functions that may be called on instances of that clas
 
 ### `member function declare start`
 
-`member function declare start` `:` *`[privacy]`* `functionName` `returnType` *`[parameterName, parameterType, ...]` `throws` `[possibleExceptionType, ...]`*
+`member function declare start` `:` *`privacy`* `functionName` `returnType` *`[parameterName, parameterType, ...]` `throws` `[possibleExceptionType, ...]`*
 
 Privacy may be `"public"`, `"protected"`, or `"private"`.
 The function name may be modified as per the language's convention.
@@ -17,7 +17,7 @@ It should be written in GLS in `PascalCase`.
 
 Member functions are ended with `member function declare end`.
 
-### `member function` : *`[privacy]`* `instanceName` `functionName` *`[parameterName, parameterType, ...]`*
+### `member function` : *`privacy`* `instanceName` `functionName` *`[parameterName, parameterType, ...]`*
 
 Calling a member function is done with `member function`.
 Privacy may be `"public"`, `"protected"`, or `"private"`.

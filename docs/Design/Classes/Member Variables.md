@@ -14,7 +14,7 @@ Others such as Python and Ruby forgo declaring them altogether under certain con
 
 ### `member variable declare`
 
-`member variable declare` `:` *`[privacy]`* `name` `type`
+`member variable declare` `:` *`privacy`* `name` `type`
 
 Declaring a member variable will be done with the `member variable declare` command.
 This takes in the variable's privacy, name, and type.
@@ -27,7 +27,7 @@ It should be written in GLS in `camelCase`.
 
 ### `member variable`
 
-`member variable` `:` `[privacy]` `instanceName` `variableName`
+`member variable` `:` `privacy` `instanceName` `variableName`
 
 Retrieving a member variable will be done with the `member variable` command.
 This takes in the variable's privacy, instance name, and variable name.

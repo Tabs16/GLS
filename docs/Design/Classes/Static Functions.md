@@ -9,7 +9,7 @@ Classes may define static functions that may be called as members of the class.
 
 ### `static function declare start`
 
-`static function declare start` `:` *`[privacy]`* `functionName` `returnType` *`[parameterName, parameterType, ...]` `throws` `[possibleExceptionType, ...]`*
+`static function declare start` `:` *`privacy`* `functionName` `returnType` *`[parameterName, parameterType, ...]` `throws` `[possibleExceptionType, ...]`*
 
 Privacy may be `"public"`, `"protected"`, or `"private"`.
 The function name may be modified as per the language's convention.
@@ -17,7 +17,7 @@ It should be written in GLS in `PascalCase`.
 
 Static functions are ended with `static function declare end`.
 
-### `static function` : *`[privacy]`* `instanceName` `functionName` *`[parameterName, parameterType, ...]`*
+### `static function` : *`privacy`* `instanceName` `functionName` *`[parameterName, parameterType, ...]`*
 
 Calling a static function is done with `static function`.
 Privacy may be `"public"`, `"protected"`, or `"private"`.

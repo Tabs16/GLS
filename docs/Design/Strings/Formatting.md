@@ -23,9 +23,8 @@ Format strings are string literals with any number of bracket-surrounded numbers
 variable : foo string "foo"
 variable : bar int 7
 
-string format : "..."
-string format : ("Foo: {0}") foo
-string format : ("Foo: {0}; Bar: {1}") foo bar
+string format : ("Foo: {0}") foo string
+string format : ("Foo: {0}; Bar: {1}") foo string bar int
 ```
 
 ### CSharp
