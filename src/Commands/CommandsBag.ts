@@ -44,6 +44,7 @@ import { ForEachPairStartCommand } from "./ForEachPairStartCommand";
 import { ForEachStartCommand } from "./ForEachStartCommand";
 import { ForNumbersEndCommand } from "./ForNumbersEndCommand";
 import { ForNumbersStartCommand } from "./ForNumbersStartCommand";
+import { FunctionCommand } from "./FunctionCommand";
 import { FunctionEndCommand } from "./FunctionEndCommand";
 import { FunctionStartCommand } from "./FunctionStartCommand";
 import { IfEndCommand } from "./IfEndCommand";
@@ -66,6 +67,8 @@ import { ListPushCommand } from "./ListPushCommand";
 import { ListSortCommand } from "./ListSortCommand";
 import { ListTypeCommand } from "./ListTypeCommand";
 import { LiteralCommand } from "./LiteralCommand";
+import { MainContextEndCommand } from "./MainContextEndCommand";
+import { MainContextStartCommand } from "./MainContextStartCommand";
 import { MainEndCommand } from "./MainEndCommand";
 import { MainStartCommand } from "./MainStartCommand";
 import { MathAbsoluteCommand } from "./MathAbsoluteCommand";
@@ -163,6 +166,7 @@ export class CommandsBag {
             [CommandNames.ForEachStart]: new ForEachStartCommand(context),
             [CommandNames.ForNumbersStart]: new ForNumbersStartCommand(context),
             [CommandNames.ForNumbersEnd]: new ForNumbersEndCommand(context),
+            [CommandNames.Function]: new FunctionCommand(context),
             [CommandNames.FunctionStart]: new FunctionStartCommand(context),
             [CommandNames.FunctionEnd]: new FunctionEndCommand(context),
             [CommandNames.IfEnd]: new IfEndCommand(context),
@@ -185,6 +189,8 @@ export class CommandsBag {
             [CommandNames.Literal]: new LiteralCommand(context),
             [CommandNames.ListSort]: new ListSortCommand(context),
             [CommandNames.ListType]: new ListTypeCommand(context),
+            [CommandNames.MainContextEnd]: new MainContextEndCommand(context),
+            [CommandNames.MainContextStart]: new MainContextStartCommand(context),
             [CommandNames.MainEnd]: new MainEndCommand(context),
             [CommandNames.MainStart]: new MainStartCommand(context),
             [CommandNames.MathAbsolute]: new MathAbsoluteCommand(context),

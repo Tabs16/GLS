@@ -14,14 +14,14 @@ export class MainStartCommand extends Command {
      */
     public render(parameters: string[]): LineResults {
         const output: CommandResult[] = [];
-        const startLines: string[] = this.language.properties.style.mainStartLines;
+        const startLines: string[] = this.language.properties.main.mainStartLines;
 
         for (const startLine of startLines) {
             output.push(new CommandResult(startLine, 0));
         }
 
         if (output.length !== 0) {
-            output[output.length - 1].indentation = this.language.properties.style.mainIndentation;
+            output[output.length - 1].indentation = this.language.properties.main.mainIndentation;
         }
 
         return new LineResults(output, false);

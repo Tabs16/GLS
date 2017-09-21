@@ -50,7 +50,8 @@ export class FunctionStartCommand extends Command {
         }
 
         declaration += this.language.properties.functions.defineStartLeft;
-        declaration += parameters[1] + "(";
+        declaration += this.context.convertStringToCase(parameters[1], this.language.properties.functions.case);
+        declaration += "(";
 
         if (parameters.length > 3) {
             declaration += this.generateParameterVariable(parameters, 3);

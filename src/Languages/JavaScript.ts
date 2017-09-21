@@ -17,6 +17,7 @@ import { InterfaceProperties } from "./Properties/InterfaceProperties";
 import { LambdaProperties } from "./Properties/LambdaProperties";
 import { ListProperties } from "./Properties/ListProperties";
 import { LoopProperties } from "./Properties/LoopProperties";
+import { MainProperties } from "./Properties/MainProperties";
 import { MathProperties } from "./Properties/MathProperties";
 import { NativeCallProperties, NativeCallScope, NativeCallType } from "./Properties/NativeCallProperties";
 import { NewInstantiationSyntaxKind, NewProperties } from "./Properties/NewProperties";
@@ -226,6 +227,9 @@ export class JavaScript extends CLikeLanguage {
      */
     protected generateFunctionProperties(functions: FunctionProperties): void {
         super.generateFunctionProperties(functions);
+
+        functions.case = CaseStyle.CamelCase;
+
         functions.defineStartLeft = "function ";
         functions.defineStartRight = " {";
         functions.explicitReturns = false;
@@ -330,6 +334,20 @@ export class JavaScript extends CLikeLanguage {
         loops.forEachStartItteration = " (";
         loops.forEachStartSeparator = " of ";
         loops.forEachStartRight = ") {";
+    }
+
+    /**
+     * Generates metadata on main execution areas.
+     *
+     * @param math   A property container for metadata on main execution areas.
+     */
+    protected generateMainProperties(main: MainProperties): void {
+        main.contextEndLines = [];
+        main.contextIndentation = 0;
+        main.contextStartLines = [];
+        main.mainEndLines = [];
+        main.mainIndentation = 0;
+        main.mainStartLines = [];
     }
 
     /**
@@ -451,12 +469,6 @@ export class JavaScript extends CLikeLanguage {
      */
     protected generateStyleProperties(style: StyleProperties): void {
         super.generateStyleProperties(style);
-
-        style.mainEndLines = ["})();"];
-        style.mainIndentation = 1;
-        style.mainStartLines = [
-            "(() => {"
-        ];
 
         style.printEnd = ")";
         style.printStart = "console.log(";
