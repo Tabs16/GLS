@@ -151,7 +151,7 @@ No language is perfect. The following are some seemingly obvious omissions in GL
     </thead>
     <tbody>
         <tr>
-            <th>`async`/`await`!</th>
+            <th><code>async</code>/<code>await</code>!</th>
             <td></td>
             <td><em>Missing</em></td>
             <td></td>
@@ -163,7 +163,15 @@ No language is perfect. The following are some seemingly obvious omissions in GL
             <td></td>
             <td></td>
             <td></td>
-            <td><em>Missing</em></td>
+            <td><em><a href="https://github.com/tc39/proposal-class-fields">Pending</em></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Static Member Variables</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><em><a href="https://github.com/tc39/proposal-class-fields">Pending</em></td>
             <td></td>
         </tr>
         <tr>
