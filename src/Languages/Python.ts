@@ -302,7 +302,7 @@ export class Python extends PythonicLanguage {
         super.generateListProperties(lists);
         lists.length = new NativeCallProperties(
             "len",
-            NativeCallScope.Member,
+            NativeCallScope.Static,
             NativeCallType.Function);
         lists.pop = new NativeCallProperties(
             "pop",

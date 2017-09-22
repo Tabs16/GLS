@@ -1,3 +1,3 @@
 #
-foo.len()
+len(foo)
 #
