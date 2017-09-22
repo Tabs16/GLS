@@ -245,4 +245,11 @@ export class CommandsBag {
 
         return this.commands[alias];
     }
+
+    /**
+     * @returns Commands, keyed by their GLS aliases.
+     */
+    public getCommands(): { [i: string]: Command } {
+        return this.commands;
+    }
 }
