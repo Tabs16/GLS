@@ -15,6 +15,7 @@ export class MemberFunctionCommand extends Command {
     private static parameters: Parameter[] = [
         new SingleParameter("privacy", "The privacy of the function.", true),
         new SingleParameter("name", "The name of the function.", true),
+        new SingleParameter("returnType", "Return type of the member function", true),
         new RepeatingParameters(
             "Function parameters.",
             [

@@ -12,7 +12,8 @@ export class InterfaceMethodCommand extends Command {
      * Information on parameters this command takes in.
      */
     private static parameters: Parameter[] = [
-        new SingleParameter("InterfaceName", "The Interface name.", true),
+        new SingleParameter("MethodName", "The method name.", true),
+        new SingleParameter("returnType", "Return type of the method", true),
         new RepeatingParameters(
             "Method arguments.",
             [
