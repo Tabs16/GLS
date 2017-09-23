@@ -140,18 +140,20 @@ GLS is halfway between **0.3** and **0.4**.
 
 No language is perfect. The following are some seemingly obvious omissions in GLS that are due to languages not supporting them:
 
+
 <table>
     <thead>
         <th>Feature</th>
         <th>C#</th>
         <th>Java</th>
+        <th>JavaScript</th>
         <th>Python</th>
         <th>Ruby</th>
-        <th>(Java|Type)Script</th>
+        <th>TypeScript</th>
     </thead>
     <tbody>
         <tr>
-            <th><code>async</code>/<code>await</code>!</th>
+            <th>async/await</th>
             <td></td>
             <td><em>Missing</em></td>
             <td></td>
@@ -162,20 +164,23 @@ No language is perfect. The following are some seemingly obvious omissions in GL
             <th>Default Member Variable Values</th>
             <td></td>
             <td></td>
-            <td></td>
             <td><em><a href="https://github.com/tc39/proposal-class-fields">Pending</em></td>
+            <td></td>
+            <td></td>
             <td></td>
         </tr>
         <tr>
             <th>Static Member Variables</th>
             <td></td>
             <td></td>
-            <td></td>
             <td><em><a href="https://github.com/tc39/proposal-class-fields">Pending</em></td>
+            <td></td>
+            <td></td>
             <td></td>
         </tr>
         <tr>
             <th>Do/While Loops</th>
+            <td></td>
             <td></td>
             <td></td>
             <td><em>Missing</em></td>
@@ -187,14 +192,16 @@ No language is perfect. The following are some seemingly obvious omissions in GL
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
             <td><em>Missing</em></td>
             <td></td>
         </tr>
         <tr>
             <th>Multiline Lambdas</th>
             <td></td>
-            <td><em>Missing</em></td>
             <td></td>
+            <td></td>
+            <td><em>Missing</em></td>
             <td></td>
             <td></td>
         </tr>
@@ -202,6 +209,7 @@ No language is perfect. The following are some seemingly obvious omissions in GL
             <th>Optional Parameters</th>
             <td></td>
             <td><em>Missing</em></td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -213,11 +221,13 @@ No language is perfect. The following are some seemingly obvious omissions in GL
             <td><em>Missing</em></td>
             <td><em>Missing</em></td>
             <td><em>Missing</em></td>
+            <td><em>Missing</em></td>
         </tr>
         <tr>
             <th>String.Replace</th>
             <td></td>
             <td></td>
+            <td><em>Abnormal</em></td>
             <td></td>
             <td></td>
             <td><em>Abnormal</em></td>
@@ -226,12 +236,14 @@ No language is perfect. The following are some seemingly obvious omissions in GL
             <th>Switch Statements</th>
             <td></td>
             <td></td>
+            <td></td>
             <td><em>Missing</em></td>
             <td></td>
             <td></td>
         </tr>
     </tbody>
 </table>
+
 
 This list will grow as features are requested.
 
