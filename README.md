@@ -257,26 +257,37 @@ Not all languages work similarly to the supported ones. These will likely never 
         <th>Language</th>
         <th>Manual Pointers</th>
         <th>Unusual Classes</th>
+        <th>Unusual Returns</th>
     </thead>
     <tbody>
         <tr>
             <th>C</th>
             <td>✓</td>
             <td>✓</td>
+            <td></td>
         </tr>
         <tr>
             <th>C++</th>
             <td><a href="https://github.com/HighSchoolHacking/GLS/issues/190">✓ (#190)</a></td>
+            <td></td>
             <td></td>
         </tr>
         <tr>
             <th>Go</th>
             <td></td>
             <td>✓</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Matlab</th>
+            <td></td>
+            <td></td>
+            <td>✓</td>
         </tr>
         <tr>
             <th>Rust</th>
             <td>✓</td>
+            <td></td>
             <td></td>
         </tr>
     </tbody>
