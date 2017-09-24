@@ -2,27 +2,90 @@
 
 Most simple math operations are doable with the `operation` command. It takes in an odd number of parameters, alternating between values \(which can be either direct numbers or variable names\) and operators. Operators are given as plain names with spaces between words. The supported operators are:
 
-| GLS Syntax | Common Equivalent |
-| :--- | :--- |
-| and | && |
-| decrease by | -= |
-| divide | / |
-| divide by | /= |
-| equal to | = |
-| equals | == |
-| greater than | &gt; |
-| greater than or equal to | &gt;= |
-| increase by | += |
-| less than | &lt; |
-| less than or equal to | &lt;= |
-| minus | - |
-| mod | % |
-| multiply by | \*= |
-| not | ! |
-| not equal to | != |
-| or | \|\| |
-| plus | + |
-| times | \* |
+<table>
+    <thead>
+        <th>GLS Syntax</th>
+        <th>Common Equivalent</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>and</td>
+            <td><code>&&</code></td>
+        </tr>
+        <tr>
+            <td>decrease by</td>
+            <td><code>-=</code></td>
+        </tr>
+        <tr>
+            <td>divide</td>
+            <td><code>&#47;</code></td>
+        </tr>
+        <tr>
+            <td>divide by</td>
+            <td><code>&#47;=</code></td>
+        </tr>
+        <tr>
+            <td>equal to</td>
+            <td><code>=</code></td>
+        </tr>
+        <tr>
+            <td>equals</td>
+            <td><code>==</code></td>
+        </tr>
+        <tr>
+            <td>greater than</td>
+            <td><code>&gt;</code></td>
+        </tr>
+        <tr>
+            <td>greater than or equal to</td>
+            <td><code>&gt;=</code></td>
+        </tr>
+        <tr>
+            <td>increase by</td>
+            <td><code>+=</code></td>
+        </tr>
+        <tr>
+            <td>less than</td>
+            <td><code>&lt;</code></td>
+        </tr>
+        <tr>
+            <td>less than or equal to</td>
+            <td><code>&lt;=</code></td>
+        </tr>
+        <tr>
+            <td>minus</td>
+            <td><code>-</code></td>
+        </tr>
+        <tr>
+            <td>mod</td>
+            <td><code>%</code></td>
+        </tr>
+        <tr>
+            <td>multiply by</td>
+            <td><code>*=</code></td>
+        </tr>
+        <tr>
+            <td>not</td>
+            <td><code>!</code></td>
+        </tr>
+        <tr>
+            <td>not equal to</td>
+            <td><code>!=</code></td>
+        </tr>
+        <tr>
+            <td>or</td>
+            <td><code>||</code></td>
+        </tr>
+        <tr>
+            <td>plus</td>
+            <td><code>+</code></td>
+        </tr>
+        <tr>
+            <td>times</td>
+            <td><code>*</code></td>
+        </tr>
+    </tbody>
+</table>
 
 > Recall that parenthesis are required for arguments with spaces: including operator aliases.
 
