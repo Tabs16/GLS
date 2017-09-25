@@ -1,6 +1,7 @@
 # Syntax
 
-Each line in GLS consists of a function, a colon, and any number of arguments, all separated by spaces.
+Each line in GLS starts with a function name.
+If there are arguments, they are preceded by a space-padded colon following the function name, all separated by spaces.
 
 ```gls
 print : "GLS!"

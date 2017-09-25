@@ -16,5 +16,5 @@
     * [Statics](docs/statics.md)
   * [Files](docs/files.md)
   * [Imports](docs/imports.md)
-* [Omissions](docs/omissions.md)
 * [Internals](docs/internals.md)
+* [Omissions](docs/omissions.md)
