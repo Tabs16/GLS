@@ -4,7 +4,7 @@ Most languages either lack type annotations or recognize some kind of "interface
 
 `interface start` takes in a PascalCase name of an interface followed by any number of interfaces to extend from. End an interface with `interface end`. 
 
-Declare public methods on an interface with `interface method`, which takes the name of the interface in PascalCase, the return type, followed by any number of \(name, type\) parameters.
+Declare public methods on an interface with `interface method`, which takes the name of the method in PascalCase, the return type, followed by any number of \(name, type\) parameters.
 
 ```gls
 interface start : IShape
