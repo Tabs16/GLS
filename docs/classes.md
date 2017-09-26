@@ -81,6 +81,10 @@ class Noun(Word):
 
 You can pass a reference to the current class using the `this` command.
 
+```gls
+this
+```
+
 * In C\#: `this`
 * In Python: `self`
 
