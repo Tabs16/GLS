@@ -18,7 +18,7 @@ GLS can be used as a command-line app or via `import`/`require`.
 To convert `file.gls` to `file.py`:
 
 ```shell
-npm install gls-cli --global
+npm install general-language-syntax gls-cli --global
 
 gls --language Python file.gls
 ```
