@@ -23,13 +23,14 @@ If any target language doesn't reasonably support a feature, GLS cannot support 
 
 Not all languages work similarly to the supported ones. These will likely never receive GLS support, for the following common reasons \(among others\):
 
-| Language | Manual Pointers | Unusual Classes | Unusual Returns |
-| :--- | :--- | :--- | :--- |
-| C | ✓ | ✓ |  |
-| C++ | ✓ |  |  |
-| Go |  | ✓ |  |
-| Matlab |  |  | ✓ |
-| Rust | ✓ |  |  |
+| Language | Manual Pointers | Pass-By-Value | Unusual Classes | Unusual Returns |
+| :--- | :--- | :--- | :--- | :--- |
+| C | ✓ | ✓ | ✓ |  |
+| C++ | ✓ |  |  |  |
+| Go |  |  | ✓ |  |
+| Matlab |  |  |  | ✓ |
+| R |  | ✓ |  |  |
+| Rust | ✓ |  |  |  |
 
 This list will grow as languages are requested.
 
