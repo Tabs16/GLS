@@ -97,4 +97,4 @@ GLS is halfway between **0.3** and **0.4**.
 
 ## Development
 
-If you'd like to contribute to GLS, see [Development.md](https://github.com/general-language-syntax/GLS/blob/master/docs/Development.md).
+If you'd like to contribute to GLS, see [Development.md](https://github.com/general-language-syntax/GLS/blob/master/docs/development.md).
