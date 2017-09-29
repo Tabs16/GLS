@@ -1,3 +1,5 @@
+export { CaseStyleConverter } from "./Conversions/Casing/CaseStyleConverter";
+export { CaseStyleConverterBag } from "./Conversions/Casing/CaseStyleConverterBag";
 export { ConversionContext } from "./Conversions/ConversionContext";
 export { Command } from "./Commands/Command";
 export { CommandsBag } from "./Commands/CommandsBag";
@@ -6,6 +8,7 @@ export { Parameter } from "./Commands/Parameters/Parameter";
 export { RepeatingParameters } from "./Commands/Parameters/RepeatingParameters";
 export { SingleParameter } from "./Commands/Parameters/SingleParameter";
 export { Gls } from "./Gls";
+export { CaseStyle } from "./Languages/Casing/CaseStyle";
 export { Language } from "./Languages/Language";
 export { LanguagesBag } from "./Languages/LanguagesBag";
 export { CSharp } from "./Languages/CSharp";
