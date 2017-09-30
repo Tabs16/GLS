@@ -67,6 +67,7 @@ export class JavaScript extends CLikeLanguage {
 
         variables.protectedCase = CaseStyle.CamelCase;
         variables.publicCase = CaseStyle.CamelCase;
+        variables.skipMemberVariables = true;
     }
 
     /**

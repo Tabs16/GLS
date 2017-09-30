@@ -1,8 +1,8 @@
 -
 comment line : Initialization
-variable : aaa string[] { array initialize : string }
-variable : bbb int[] { array initialize : int 1 2 3 }
-variable : ccc string[][] { array initialize : string[] aaa { array initialize : string "eee" "fff" } }
+variable : aaa { array type : string } { array initialize : string }
+variable : bbb { array type : int } { array initialize : int 1 2 3 }
+variable : ccc { array type : { array type : string } } { array initialize : { array type : string } aaa { array initialize : string "eee" "fff" } }
 
 comment line : Members
 index : aaa 0

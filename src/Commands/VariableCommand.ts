@@ -1,4 +1,5 @@
 import { Command } from "./Command";
+import { CommandNames } from "./CommandNames";
 import { LineResults } from "./LineResults";
 import { Parameter } from "./Parameters/Parameter";
 import { SingleParameter } from "./Parameters/SingleParameter";
@@ -36,7 +37,7 @@ export class VariableCommand extends Command {
 
         const starter: string = this.language.properties.variables.declaration;
         const newParameters: string[] = parameters.slice();
-        newParameters[0] = "variable inline";
+        newParameters[0] = CommandNames.VariableInline;
 
         const ender: string = this.context.convertParsed(newParameters).commandResults[0].text;
 

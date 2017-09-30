@@ -1,4 +1,5 @@
 import { Command } from "./Command";
+import { CommandNames } from "./CommandNames";
 import { LineResults } from "./LineResults";
 import { Parameter } from "./Parameters/Parameter";
 import { SingleParameter } from "./Parameters/SingleParameter";
@@ -35,7 +36,7 @@ export class VariableInlineCommand extends Command {
         }
 
         const name: string = parameters[1];
-        const typeName: string = this.context.convertCommon("type", parameters[2]);
+        const typeName: string = this.context.convertCommon(CommandNames.Type, parameters[2]);
         let output = "";
 
         if (this.language.properties.variables.explicitTypes) {
