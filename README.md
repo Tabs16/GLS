@@ -4,7 +4,8 @@
 [![NPM version](https://badge.fury.io/js/general-language-syntax.svg)](http://badge.fury.io/js/general-language-syntax)
 
 A unified syntax that compiles into a number of OOP languages.
-Try it at **[aka.ms/gls-demo](https://aka.ms/gls-demo)**.
+* Read the docs at **[glslang.org](https://glslang.org)**.
+* Try it at **[aka.ms/gls-demo](https://aka.ms/gls-demo)**.
 
 ***GLS is still under development. Don't expect everything to work!***
 
