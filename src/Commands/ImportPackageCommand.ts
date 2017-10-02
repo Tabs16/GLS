@@ -4,16 +4,15 @@ import { ImportCommand } from "./ImportCommand";
 import { CommandMetadata } from "./Metadata/CommandMetadata";
 
 /**
- * A command for importing items from an absolute package.
+ * Imports items from an absolute package.
  */
 export class ImportPackageCommand extends ImportCommand {
     /**
-     * Information on parameters this command takes in.
+     * Metadata on the command.
      */
-    private static metadata: CommandMetadata = new CommandMetadata(
-        CommandNames.ImportPackage,
-        [],
-        ImportCommand.parameters);
+    private static metadata: CommandMetadata = new CommandMetadata(CommandNames.ImportPackage)
+        .withDescription("Imports items from an absolute package.")
+        .withParameters(ImportCommand.parameters);
 
     /**
      * @returns Metadata on the command.
