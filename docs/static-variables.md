@@ -9,13 +9,13 @@ class start : AnglePrinter
     static variable declare : private rightAlias string "right"
     static variable declare : private rightAmount int 90
 
-    static function declare start : public PrintAngle string angle int
+    member function declare start : public PrintAngle string angle int
         if start : { operation : angle (equal to) { static variable : private AnglePrinter rightAmount } }
             return : { static variable : private AnglePrinter rightAlias }
         if end
 
         return : { string format : ("{0} degrees") angle int }
-    static function declare end
+    member function declare end
 class end
 ```
 
@@ -27,7 +27,7 @@ class AnglePrinter
     private static string rightAlias = "right";
     private static int rightAmount = 90;
 
-    public static string PrintAngle(int angle)
+    public string PrintAngle(int angle)
     {
         if (angle == AnglePrinter.rightAmount)
         {
@@ -46,7 +46,6 @@ class AnglePrinter:
     __right_alias = "right"
     __right_amount = 90
 
-    @staticmethod
     def print_angle(angle):
         if angle == AnglePrinter.__right_amount:
             return AnglePrinter.__right_alias
